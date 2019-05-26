@@ -1,11 +1,11 @@
 import React from 'react';
 import facebook_icon from '../assets/images/facebook_icon.svg';
 import instragram_icon from '../assets/images/instagram_icon.svg'
-import { Header, Wrapper, Links, StyledLink, SocialLinks, SocialLink, FadeIn } from '../assets/styleSheets/theme'
+import { Header, Wrapper, Links, StyledLink, SocialLinks, SocialLink, Logo } from '../assets/styleSheets/theme'
 
 const NavBar = () => {
   return (
-    <div>
+    <Wrapper>
       <SocialLinks>
           <a href="https://www.facebook.com/krystinarosephotography/">
             <SocialLink src={facebook_icon} />
@@ -15,12 +15,7 @@ const NavBar = () => {
           </a>
         </SocialLinks>
       <Header>
-      
-        <Wrapper>
-        
-          <FadeIn>Logo</FadeIn>
-        
-        </Wrapper>
+        <Logo>Logo</Logo>
         
         <Links>
           <StyledLink to='/' exact>Home</StyledLink>
@@ -30,7 +25,7 @@ const NavBar = () => {
           <StyledLink to='/contact' exact>Contact Us</StyledLink>
         </Links>
       </Header>
-    </div>
+    </Wrapper>
   )
 }
 

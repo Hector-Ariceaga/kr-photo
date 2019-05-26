@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components'
 import fadeIn from 'react-animations/lib/fade-in';
+import { fadeInDown } from 'react-animations'
+import { pulse } from 'react-animations'
 
 export const Header = styled.section`
   text-align: center;
@@ -17,24 +19,32 @@ export const Links = styled.div`
   font-size: 1.5em
 `
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(NavLink)`
   color: gray;
   &:hover {color: lightgray};
+  &.active {
+    color: #BC9B5D;
+    animation: 1s ${keyframes `${fadeInDown}`} 1;
+  }
   text-decoration: none;
   margin-right: 100px;
   font-family: 'Josefin Sans'
 `;
 
 export const SocialLinks = styled.div`
-  float: right;
+  display: in-line;
   text-align: right;
+  margin-right: 1em;
 `
 export const SocialLink = styled.img`
-  margin-right: 
+  margin-right: 1em;
+  &:hover {
+    animation: 1s ${keyframes `${pulse}`} 1;
+  }
 `
 
-export const FadeIn = styled.div`
-  padding-top: 2em;
+export const Logo = styled.div`
+  padding-bottom: 3em;
   text-align: center;
-  animation: 4s ${keyframes `${fadeIn}`} 1;
+  animation: 5s ${keyframes `${fadeIn}`} 1;
 `

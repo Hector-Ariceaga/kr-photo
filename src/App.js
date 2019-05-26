@@ -1,17 +1,13 @@
 import React from 'react';
-import styled from 'styled-components'
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import Home from './components/Home';
 
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-  text-align: center;
-  `;
 
 function App() {
   return (
-    <Wrapper>
-      KR Photo
-    </Wrapper>
+    <Router>
+      <Route exact path="/" component={Home} />
+    </Router>
   );
 }
 

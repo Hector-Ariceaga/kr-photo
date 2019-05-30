@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
-
-const StyledH3 = styled.h3`
-  font-family: 'Forum'
-`
+import { PageContent, TallImagePreview } from '../assets/styleSheets/theme.js'
+import image1 from '../assets/images/image1.webp'
 
 export default class Home extends Component {
   render() {
     return(
-      <StyledH3>content</StyledH3>
+      <PageContent>
+        <TallImagePreview src={image1} alt="wedding photo" />
+      </PageContent>
     )
   }
 }

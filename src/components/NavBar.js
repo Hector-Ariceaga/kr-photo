@@ -1,6 +1,7 @@
 import React from 'react';
 import facebook_icon from '../assets/images/facebook_icon.svg';
 import instragram_icon from '../assets/images/instagram_icon.svg'
+import KRP_Logo from '../assets/images/KRP_Logo.png'
 import { Header, Wrapper, Links, StyledLink, SocialLinks, SocialLink, Logo } from '../assets/styleSheets/theme'
 
 const NavBar = () => {
@@ -15,7 +16,7 @@ const NavBar = () => {
           </a>
         </SocialLinks>
       <Header>
-        <Logo>Logo</Logo>
+        <Logo src={KRP_Logo} alt="logo" />
         
         <Links>
           <StyledLink to='/' exact>Home</StyledLink>

@@ -28,13 +28,13 @@ export const StyledLink = styled(NavLink)`
   }
   text-decoration: none;
   margin-right: 100px;
-  font-family: 'Josefin Sans'
+  font-family: 'Cormorant Garamond'
 `;
 
 export const SocialLinks = styled.div`
   display: in-line;
   text-align: right;
-  margin-right: 1em;
+  margin-right: 10em;
 `
 export const SocialLink = styled.img`
   margin-right: 1em;
@@ -43,8 +43,22 @@ export const SocialLink = styled.img`
   }
 `
 
-export const Logo = styled.div`
-  padding-bottom: 3em;
-  text-align: center;
+export const Logo = styled.img`
+  width: 253px;
+  height: 146px;
+  margin-top: -40px;
+  padding-bottom: 1em;
   animation: 5s ${keyframes `${fadeIn}`} 1;
+`
+export const PageContent = styled.div`
+  display: flex;
+  width: auto;
+  margin-left: 10%;
+  margin-right: 10%
+  border: 1px solid black;
+`
+export const TallImagePreview = styled.img`
+  display: flex;
+  width: auto;
+  height: auto;
 `

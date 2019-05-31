@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './containers/Home';
 import NavBar from './components/NavBar';
 import { createGlobalStyle } from "styled-components";
+import { Site } from './assets/styleSheets/theme.js'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -13,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
 
 function App() {
   return (
-    <>
+    <Site>
       <GlobalStyles />
       <Router>
         <NavBar />
@@ -23,7 +24,7 @@ function App() {
         </Switch>
         
       </Router>
-    </>
+    </Site>
     
   );
 }

@@ -9,7 +9,7 @@ export default class Home extends Component {
   
   render() {
     const quotes = [
-      ["The headshots you tooks for Evil Deal at 2nd Street Theater are some of the best work I've seen in town. They look fantastic! Great work, as always!", "Kara {Bend, OR}"],
+      ["The headshots you tooks for Evil Dead! at 2nd Street Theater are some of the best work I've seen in town. They look fantastic! Great work, as always!", "Kara {Bend, OR}"],
       ["Krystina, you are amazingly and artistically talented! We just got our photos and all I can say is wow! Stellar, stunning, beautiful and creative. The time and effort you put into our special day was more than we could've asked from the bottom of our hearts.", "Catherine {Bend, OR}"],
       ["Krystina Rose Photography did the best job ever taking these photos! Still not sure how she got some of there amazing shots.", "Amber {Bend, OR}"]
     ]

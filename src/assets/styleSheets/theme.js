@@ -19,7 +19,11 @@ export const FooterSection = styled.footer`
   width: 100%;
   background: #DBB89A;
   text-align: center;
-  padding: 0.25em 0em;
+  li {
+      list-style-type:none
+      padding: 0.25em;
+    }
+  }
 `
 
 export const Links = styled.div`
@@ -79,11 +83,14 @@ export const TwoPortrait = styled.div`
   justify-content: space-between;
 `
 export const Tag = styled.h6`
-
+  font-family: 'Montserrat'
 `
 export const Subtitle = styled.h3`
-  margin-top: -1em;
+  margin-top: -0.4em;
+  margin-bottom: 0.5em;
   color: #BC9B5D;
+  font-family: 'Tangerine';
+  font-size: 2.5em;
 `
 
 export const Description = styled.p`
@@ -91,14 +98,18 @@ export const Description = styled.p`
 `
 
 export const ContentSection = styled.section`
+  &:first-of-type {
+    margin-top: -1em;
+  }
   margin-left: auto;
   margin-right: auto;
   margin-bottom: -0.25em;
 `
 export const Quote = styled.p`
-
+  
 `
 
 export const Author = styled.p`
-
+  margin-top: -1em;
+  font-weight: bold;
 `

@@ -9,7 +9,9 @@ import { Site } from './assets/styleSheets/theme.js'
 const GlobalStyles = createGlobalStyle`
   * {
     @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
-    font-family:'Cormorant Garamond', sans-serif;
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
+    font-family:'Cormorant Garamond', 'Montserrat', 'Tangerine', sans-serif, cursive;
   }
 `
 

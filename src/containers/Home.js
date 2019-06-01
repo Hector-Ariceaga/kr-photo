@@ -1,25 +1,49 @@
 import React, { Component } from 'react';
-import { PageContent, TallImagePreview, TwoPortrait, Tag, Subtitle, Description } from '../assets/styleSheets/theme.js'
+import { PageContent, TallImagePreview, TwoPortrait, Description } from '../assets/styleSheets/theme.js'
 import image1 from '../assets/images/image1.webp'
 import image2 from '../assets/images/image2.webp'
+import buildSection from '../components/buildSection.js';
+import buildQuote from '../components/buildQuote.js';
 
 export default class Home extends Component {
+  
   render() {
+    const quotes = [
+      ["The headshots you tooks for Evil Deal at 2nd Street Theater are some of the best work I've seen in town. They look fantastic! Great work, as always!", "Kara {Bend, OR}"],
+      ["Krystina, you are amazingly and artistically talented! We just got our photos and all I can say is wow! Stellar, stunning, beautiful and creative. The time and effort you put into our special day was more than we could've asked from the bottom of our hearts.", "Catherine {Bend, OR}"],
+      ["Krystina Rose Photography did the best job ever taking these photos! Still not sure how she got some of there amazing shots.", "Amber {Bend, OR}"]
+    ]
+
+    const quoteComponents = quotes.map(quote => buildQuote(quote[0], quote[1]))
+
+    const goal = buildSection(
+      "OUR GOAL", 
+      "Capture each and every beautiful moment",
+      <Description>
+        These days it's so easy to pull out your phone and take a photo, 
+        but you aren't able to be in the moment. Our goal at Krystina Rose Photography 
+        is to allow you to enjoy those memories to the fullest and let us capture them 
+        so you can cherish them for a lifetime.
+      </Description>
+    )
+
+    const clients = buildSection(
+      "OUR CLIENTS",
+      "The happiness of our clients is key",
+      quoteComponents
+    )
+
     return(
       <PageContent>
 
-        <Tag>OUR GOAL</Tag>
-        <Subtitle>Capture each and every beautiful moment</Subtitle>
-        <Description>These days it's so easy to pull out your phone and take a photo, 
-          but you aren't able to be in the moment. Our goal at Krystina Rose Photography 
-          is to allow you to enjoy those memories to the fullest and let us capture them 
-          so you can cherish them for a lifetime.</Description>
+        {goal}
 
         <TwoPortrait>
           <TallImagePreview src={image1} alt="wedding photo" />
           <TallImagePreview src={image2} alt="mansion exterior" />
         </TwoPortrait>
-        
+
+        {clients}
 
       </PageContent>
     )

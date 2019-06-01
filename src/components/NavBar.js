@@ -2,12 +2,11 @@ import React from 'react';
 import facebook_icon from '../assets/images/facebook_icon.svg';
 import instragram_icon from '../assets/images/instagram_icon.svg'
 import KRP_Logo from '../assets/images/KRP_Logo.png'
-import { Header, NavWrapper, Links, StyledLink, SocialLinks, SocialLink, Logo } from '../assets/styleSheets/theme'
+import { NavWrapper, Links, StyledLink, SocialLinks, SocialLink, Logo } from '../assets/styleSheets/theme'
 
 const NavBar = () => {
   return (
     <NavWrapper>
-      <Header>
         <Logo src={KRP_Logo} alt="logo" />
         <SocialLinks>
           <a href="https://www.facebook.com/krystinarosephotography/">
@@ -24,7 +23,6 @@ const NavBar = () => {
           <StyledLink to='/about' exact>About Us</StyledLink>
           <StyledLink to='/contact' exact>Contact Us</StyledLink>
         </Links>
-      </Header>
     </NavWrapper>
   )
 }

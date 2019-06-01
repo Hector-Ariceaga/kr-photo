@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './containers/Home';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import { createGlobalStyle } from "styled-components";
 import { Site } from './assets/styleSheets/theme.js'
 
@@ -22,7 +23,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
         </Switch>
-        
+
+        <Footer />
       </Router>
     </Site>
     

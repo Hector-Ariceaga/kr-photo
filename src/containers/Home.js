@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { PageContent, TallImagePreview, TwoPortrait, Description } from '../assets/styleSheets/theme.js'
+import { PageContent, TallImagePreview, TwoPortrait, LandscapeImageContainer, LandscapeImage, Description } from '../assets/styleSheets/theme.js'
 import image1 from '../assets/images/image1.webp'
 import image2 from '../assets/images/image2.webp'
+import image3 from '../assets/images/image3.webp'
 import buildSection from '../components/buildSection.js';
 import buildQuote from '../components/buildQuote.js';
 
@@ -44,6 +45,10 @@ export default class Home extends Component {
         </TwoPortrait>
 
         {clients}
+
+        <LandscapeImageContainer>
+          <LandscapeImage src={image3} alt='family photo' />
+        </LandscapeImageContainer>
 
       </PageContent>
     )

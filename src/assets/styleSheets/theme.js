@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { fadeInDown } from 'react-animations';
 import { pulse } from 'react-animations';
 
+/////////////////////global
 export const Site = styled.div`
   max-width: 50em;
   margin: 0 auto;
@@ -14,17 +15,39 @@ export const NavWrapper = styled.header`
 `
 
 export const FooterSection = styled.footer`
-  display: block;
+  padding: 0.1em 0em;
   height: auto;
   width: 100%;
   background: #DBB89A;
   text-align: center;
   li {
       list-style-type:none
-      padding: 0.25em;
+      font-family: 'Lateef'
+      font-size: 1em;
+      padding-bottom: 0.1em;
     }
-  }
+  }  
 `
+
+export const FooterLink = styled.a`
+  padding-bottom: 0.5em;
+  &:visited {
+    color: black;
+  } 
+`
+
+export const Logo = styled.img`
+  width: 50%;
+  height: 50%;
+  padding-bottom: 0.5em;
+`
+
+export const PageContent = styled.div`
+  margin-top: -2.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+`
+//////////////////////
 
 export const Links = styled.div`
   max-width: 50em;
@@ -45,12 +68,13 @@ export const StyledLink = styled(NavLink)`
   text-decoration: none;
   text-align: center;
   font-family: 'Cormorant Garamond'
-`;
+`
 
 export const SocialLinks = styled.div`
   text-align: center;
   padding-bottom: 0.5em;
 `
+
 export const SocialLink = styled.img`
   max-height: 12%;
   max-width: 12%;
@@ -60,16 +84,6 @@ export const SocialLink = styled.img`
   }
 `
 
-export const Logo = styled.img`
-  width: 50%;
-  height: 50%;
-  padding-bottom: 0.5em;
-`
-export const PageContent = styled.div`
-  margin-top: -2.5em;
-  margin-left: 1em;
-  margin-right: 1em;
-`
 export const TallImagePreview = styled.img`
   display: flex;
   height: 48%
@@ -82,14 +96,30 @@ export const TwoPortrait = styled.div`
   padding-top: 1em;
   justify-content: space-between;
 `
+
+export const LandscapeImageContainer = styled.div`
+  display: flex;
+  margin: auto;
+  width: auto;
+  justify-content: center;
+  padding: 1em 0em;
+`
+
+export const LandscapeImage = styled.img`
+  display: flex;
+  height: 100%
+  width: 100%
+`
+
 export const Tag = styled.h6`
   font-family: 'Montserrat'
 `
+
 export const Subtitle = styled.h3`
   margin-top: -0.4em;
   margin-bottom: 0.5em;
   color: #BC9B5D;
-  font-family: 'Tangerine';
+  font-family: 'EB Garamond';
   font-size: 2.5em;
 `
 
@@ -105,8 +135,9 @@ export const ContentSection = styled.section`
   margin-right: auto;
   margin-bottom: -0.25em;
 `
+
 export const Quote = styled.p`
-  
+  font-size: 1em;
 `
 
 export const Author = styled.p`

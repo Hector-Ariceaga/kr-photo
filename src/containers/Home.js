@@ -9,13 +9,14 @@ import buildQuote from '../components/buildQuote.js';
 export default class Home extends Component {
   
   render() {
-    const quotes = [
-      ["The headshots you tooks for Evil Dead! at 2nd Street Theater are some of the best work I've seen in town. They look fantastic! Great work, as always!", "Kara {Bend, OR}"],
-      ["Krystina, you are amazingly and artistically talented! We just got our photos and all I can say is wow! Stellar, stunning, beautiful and creative. The time and effort you put into our special day was more than we could've asked from the bottom of our hearts.", "Catherine {Bend, OR}"],
-      ["Krystina Rose Photography did the best job ever taking these photos! Still not sure how she got some of there amazing shots.", "Amber {Bend, OR}"]
+
+    const testimonial = [
+      {quote: "The headshots you tooks for Evil Dead! at 2nd Street Theater are some of the best work I've seen in town. They look fantastic! Great work, as always!", author: "Kara {Bend, OR}"}, 
+      {quote: "Krystina, you are amazingly and artistically talented! We just got our photos and all I can say is wow! Stellar, stunning, beautiful and creative. The time and effort you put into our special day was more than we could've asked from the bottom of our hearts.", author: "Catherine {Bend, OR}"},
+      {quote: "Krystina Rose Photography did the best job ever taking these photos! Still not sure how she got some of there amazing shots.", author: "Amber {Bend, OR}"}
     ]
 
-    const quoteComponents = quotes.map(quote => buildQuote(quote[0], quote[1]))
+    const quoteComponents = testimonial.map((test, id) => buildQuote(id, test.quote, test.author))
 
     const goal = buildSection(
       "OUR GOAL", 

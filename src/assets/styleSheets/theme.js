@@ -136,11 +136,20 @@ export const ContentSection = styled.section`
   margin-bottom: -0.25em;
 `
 
+export const SessionContentSection = styled(ContentSection)`
+  padding-top: 1em;
+  text-align: center;
+`
+
 export const Quote = styled.p`
   font-size: 1em;
 `
 
 export const Author = styled.p`
   margin-top: -1em;
+  font-weight: bold;
+`
+
+export const Bold = styled.span`
   font-weight: bold;
 `

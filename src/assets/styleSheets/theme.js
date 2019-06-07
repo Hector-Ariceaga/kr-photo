@@ -84,17 +84,29 @@ export const SocialLink = styled.img`
   }
 `
 
+export const TallImageContainer = styled.div`
+  height: ${props => props.inputHeight || "48%"};
+  width: ${props => props.inputWidth || "48%"};
+  font-size: 110%;
+  text-align: center;
+  font-style: italic;
+  padding-bottom: 0.5em;
+`
 export const TallImagePreview = styled.img`
   display: flex;
-  height: 48%
-  width: 48%;
+  height: ${props => props.inputHeight || "100%"};
+  width: ${props => props.inputWidth || "100%"};
 `
 export const TwoPortrait = styled.div`
   display: flex;
   margin: auto;
+  height: auto;
   width: auto;
   padding-top: 1em;
   justify-content: space-between;
+`
+
+export const FourPortrait = styled(TwoPortrait)`
 `
 
 export const LandscapeImageContainer = styled.div`
@@ -120,7 +132,8 @@ export const Subtitle = styled.h3`
   margin-bottom: 0.5em;
   color: #BC9B5D;
   font-family: 'EB Garamond';
-  font-size: 2.5em;
+  font-size: 2em;
+  font-style: italic
 `
 
 export const Description = styled.p`
@@ -152,4 +165,11 @@ export const Author = styled.p`
 
 export const Bold = styled.span`
   font-weight: bold;
+`
+export const Caption = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  text-align: center;
+  border: 1px solid black;
 `

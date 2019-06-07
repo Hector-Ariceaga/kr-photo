@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PageContent, TallImagePreview, TwoPortrait, LandscapeImageContainer, LandscapeImage, Description } from '../assets/styleSheets/theme.js'
+import { PageContent, TallImageContainer, TallImagePreview, TwoPortrait, LandscapeImageContainer, LandscapeImage, Description } from '../assets/styleSheets/theme.js'
 import image1 from '../assets/images/image1.webp'
 import image2 from '../assets/images/image2.webp'
 import image3 from '../assets/images/image3.webp'
@@ -41,8 +41,13 @@ export default class Home extends Component {
         {goal}
 
         <TwoPortrait>
-          <TallImagePreview src={image1} alt="wedding photo" />
-          <TallImagePreview src={image2} alt="mansion exterior" />
+          <TallImageContainer inputWidth="50%">
+            <TallImagePreview src={image1} alt="wedding photo" />
+          </TallImageContainer>
+          <TallImageContainer inputWidth="50%">
+            <TallImagePreview src={image2} alt="mansion exterior" />
+          </TallImageContainer>
+          
         </TwoPortrait>
 
         {clients}

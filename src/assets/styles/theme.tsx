@@ -19,15 +19,14 @@ export const FooterSection = styled.footer`
   padding: 0.1em 0em;
   height: auto;
   width: 100%;
-  background: #DBB89A;
+  background: #dbb89a;
   text-align: center;
   li {
-      list-style-type:none;
-      font-family: 'Lateef';
-      font-size: 1em;
-      padding-bottom: 0.1em;
-    }
-  }  
+    list-style-type: none;
+    font-family: "Lateef";
+    font-size: 1em;
+    padding-bottom: 0.1em;
+  }
 `;
 
 export const FooterLink = styled.a`
@@ -54,7 +53,7 @@ export const Links = styled.div`
   max-width: 50em;
   border-top: 1px solid lightgray;
   padding-top: 10px;
-  font-size: 1.3em
+  font-size: 1.3em;
   text-align: center;
 `;
 
@@ -126,8 +125,8 @@ export const LandscapeImageContainer = styled.div`
 
 export const LandscapeImage = styled.img`
   display: flex;
-  height: 100%
-  width: 100%
+  height: 100%;
+  width: 100%;
 `;
 
 export const Tag = styled.h6`

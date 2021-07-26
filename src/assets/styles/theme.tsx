@@ -5,32 +5,37 @@ import { pulse } from "react-animations";
 
 /////////////////////global
 export const Site = styled.div`
-  max-width: 50em;
+  max-width: 50rem;
   margin: 0 auto;
   font-size: 1rem;
 `;
 
 export const NavWrapper = styled.header`
   text-align: center;
-  padding-bottom: 2em;
 `;
 
 export const FooterSection = styled.footer`
-  padding: 0.1em 0em;
+  padding: 0.1rem 0em;
   height: auto;
   width: 100%;
   background: #dbb89a;
   text-align: center;
+
+  ul {
+    padding: 0;
+  }
+
   li {
     list-style-type: none;
     font-family: "Lateef";
-    font-size: 1em;
-    padding-bottom: 0.1em;
+    font-size: 1rem;
+    padding-bottom: 0.1rem;
   }
 `;
 
 export const FooterLink = styled.a`
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
+
   &:visited {
     color: black;
   }
@@ -39,21 +44,19 @@ export const FooterLink = styled.a`
 export const Logo = styled.img`
   width: 50%;
   height: 50%;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
 `;
 
 export const PageContent = styled.div`
-  margin-top: -2.5em;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 0 1rem;
 `;
 //////////////////////
 
 export const Links = styled.div`
-  max-width: 50em;
+  max-width: 50rem;
   border-top: 1px solid lightgray;
   padding-top: 10px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   text-align: center;
 `;
 
@@ -74,13 +77,13 @@ export const StyledLink = styled(NavLink)`
 
 export const SocialLinks = styled.div`
   text-align: center;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
 `;
 
 export const SocialLink = styled.img`
-  max-height: 12%;
-  max-width: 12%;
-  margin-right: 0.5em;
+  max-width: 2rem;
+  margin-right: 0.5rem;
+
   &:hover {
     animation: 1s ${keyframes`${pulse}`} 1;
   }
@@ -97,7 +100,7 @@ export const TallImageContainer = styled.div<AspectProps>`
   font-size: 110%;
   text-align: center;
   font-style: italic;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
 `;
 export const TallImagePreview = styled.img<AspectProps>`
   display: flex;
@@ -109,7 +112,7 @@ export const TwoPortrait = styled.div`
   margin: auto;
   height: auto;
   width: auto;
-  padding-top: 1em;
+  padding-top: 1rem;
   justify-content: space-between;
 `;
 
@@ -120,7 +123,7 @@ export const LandscapeImageContainer = styled.div`
   margin: auto;
   width: auto;
   justify-content: center;
-  padding: 1em 0em;
+  padding: 1rem 0rem;
 `;
 
 export const LandscapeImage = styled.img`
@@ -129,39 +132,32 @@ export const LandscapeImage = styled.img`
   width: 100%;
 `;
 
-export const Tag = styled.h6`
+export const Tag = styled.h4`
   font-family: "Montserrat";
 `;
 
 export const Subtitle = styled.h3`
-  margin-top: -0.4em;
-  margin-bottom: 0.5em;
   color: #bc9b5d;
   font-family: "EB Garamond";
-  font-size: 2em;
+  font-size: 2rem;
   font-style: italic;
 `;
 
 export const Description = styled.p`
-  margin-top: -1em;
+  display: block;
 `;
 
 export const ContentSection = styled.section`
-  &:first-of-type {
-    margin-top: -1em;
-  }
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: -0.25em;
 `;
 
 export const SessionContentSection = styled(ContentSection)`
-  padding-top: 1em;
+  padding-top: 1rem;
   text-align: center;
 `;
 
 export const Author = styled.p`
-  margin-top: -1em;
   font-weight: bold;
 `;
 

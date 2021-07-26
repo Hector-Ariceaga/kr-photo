@@ -1,6 +1,5 @@
-import React from "react";
-import facebook_icon from "../assets/images/facebook_icon.svg";
-import instragram_icon from "../assets/images/instagram_icon.svg";
+import facebook_icon from "../assets/images/facebook-round.png";
+import instragram_icon from "../assets/images/instagram-round.png";
 import KRP_Logo from "../assets/images/KRP_Logo.png";
 import {
   NavWrapper,

@@ -1,4 +1,4 @@
-import React from "react";
+import styled from "styled-components";
 import { FooterSection, FooterLink } from "../assets/styles/theme";
 
 export const Footer = () => {
@@ -6,19 +6,23 @@ export const Footer = () => {
     <FooterSection>
       <ul>
         <li>
-          Facebook and Instagram icons made by{" "}
-          <FooterLink href="https://www.flaticon.com/authors/bogdan-rosu">
-            Bogdan Rosu
-          </FooterLink>{" "}
-          from flaticon.com
+          {" "}
+          {"\u00A9"} 2021 Krystina Rose Photography - All Rights Reserved
         </li>
-        <li>All photos by Krystina Jermaczonak</li>
-        <li>
-          Website design by{" "}
-          <FooterLink href="https://techector.com">Hector Ariceaga</FooterLink>{" "}
-          {"\u00A9"} 2019
-        </li>
+        <Attribution>
+          <p>
+            Website design by{" "}
+            <FooterLink href="https://www.linkedin.com/in/hector-ariceaga">
+              Hector Ariceaga
+            </FooterLink>{" "}
+          </p>
+        </Attribution>
       </ul>
     </FooterSection>
   );
 };
+const Attribution = styled.li`
+  p {
+    font-size: 0.75rem;
+  }
+`;

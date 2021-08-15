@@ -1,17 +1,8 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { createGlobalStyle } from "styled-components";
-import { Site } from "./assets/styles/theme";
+import { GlobalStyles, Site } from "./assets/styles/theme";
 import { NavBar, Footer } from "./components";
 import { About, Contact, Home, Portfolio, Sessions } from "./containers";
-
-const GlobalStyles = createGlobalStyle`
-  * {
-    @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Montserrat|EB+Garamond|Tangerine|Lateef&display=swap');
-    font-family:'Cormorant Garamond', 'Montserrat', 'Tangerine', 'Lateef', 'EB Garamond', sans-serif, cursive;
-  }
-`;
 
 function App() {
   return (

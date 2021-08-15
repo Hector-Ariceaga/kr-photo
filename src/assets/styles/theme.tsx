@@ -1,54 +1,16 @@
-import { NavLink } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
-import { fadeInDown } from "react-animations";
-import { pulse } from "react-animations";
+import styled, { createGlobalStyle } from "styled-components";
 
 /////////////////////global
-export const Site = styled.div`
-  max-width: 50rem;
-  margin: 0 auto;
-  font-size: 1rem;
-`;
 
-export const NavWrapper = styled.header`
-  text-align: center;
-`;
-
-export const FooterSection = styled.footer`
-  padding: 0.1rem 0em;
-  height: auto;
-  width: 100%;
-  background: #dbb89a;
-  text-align: center;
-
-  ul {
-    padding: 0;
+export const GlobalStyles = createGlobalStyle`
+  * {
+    @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Montserrat|EB+Garamond|Tangerine|Lateef&display=swap');
+    font-family:'Cormorant Garamond', 'Montserrat', 'Tangerine', 'Lateef', 'EB Garamond', sans-serif, cursive;
   }
 
-  li {
-    list-style-type: none;
-    font-family: "Lateef";
-    font-size: 1rem;
-    padding-bottom: 0.1rem;
+  * body {
+    margin: 0;
   }
-`;
-
-export const FooterLink = styled.a`
-  padding-bottom: 0.5rem;
-
-  &:visited {
-    color: black;
-  }
-`;
-
-export const Logo = styled.img`
-  width: 50%;
-  height: 50%;
-  padding-bottom: 0.5rem;
-`;
-
-export const PageContent = styled.div`
-  margin-left: 0 1rem;
 `;
 
 export const theme = {
@@ -62,49 +24,38 @@ export const theme = {
   },
   colors: {
     lightTan: "#EDE4D9",
+    grey: "grey",
+    lightGrey: "lightGrey",
   },
   fonts: {
     primary: "Cormorant Garamond",
-    secondary: "serif",
+    secondary: "Montserrat",
   },
 };
+
+export const Site = styled.div`
+  font-size: 1rem;
+`;
+
+export const FooterLink = styled.a`
+  padding-bottom: 0.5rem;
+
+  &:visited {
+    color: black;
+  }
+`;
+
+export const Page = styled.div`
+  @media only screen and (min-width: ${theme.breakpoints.aboveDesktop}) {
+    margin: 0 5rem;
+  }
+`;
+
 //////////////////////
-
-export const Links = styled.div`
-  max-width: 50rem;
-  border-top: 1px solid lightgray;
-  padding-top: 10px;
-  font-size: 1.3rem;
-  text-align: center;
-`;
-
-export const StyledLink = styled(NavLink)`
-  display: block;
-  color: gray;
-  &:hover {
-    color: lightgray;
-  }
-  &.active {
-    color: #bc9b5d;
-    animation: 1s ${keyframes`${fadeInDown}`} 1;
-  }
-  text-decoration: none;
-  text-align: center;
-  font-family: "Cormorant Garamond";
-`;
 
 export const SocialLinks = styled.div`
   text-align: center;
   padding-bottom: 0.5rem;
-`;
-
-export const SocialLink = styled.img`
-  max-width: 2rem;
-  margin-right: 0.5rem;
-
-  &:hover {
-    animation: 1s ${keyframes`${pulse}`} 1;
-  }
 `;
 
 type AspectProps = {

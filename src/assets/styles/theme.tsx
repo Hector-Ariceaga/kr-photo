@@ -50,6 +50,24 @@ export const Logo = styled.img`
 export const PageContent = styled.div`
   margin-left: 0 1rem;
 `;
+
+export const theme = {
+  breakpoints: {
+    desktop: "1024px",
+    aboveDesktop: "1025px",
+    tablet: "768px",
+    aboveTablet: "769px",
+    mobile: "320px",
+    aboveMobile: "321px",
+  },
+  colors: {
+    lightTan: "#EDE4D9",
+  },
+  fonts: {
+    primary: "Cormorant Garamond",
+    secondary: "serif",
+  },
+};
 //////////////////////
 
 export const Links = styled.div`

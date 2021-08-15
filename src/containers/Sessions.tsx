@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Section } from "../components/Section";
 import {
-  PageContent,
+  Page,
   LandscapeImageContainer,
   LandscapeImage,
   Description,
@@ -60,7 +60,7 @@ export class Sessions extends Component {
       <Section subtitle="Ask us about our pricing lists and packages to fit just what you need"></Section>
     );
     return (
-      <PageContent>
+      <Page>
         <LandscapeImageContainer>
           <LandscapeImage
             src={family_portrait_forest}
@@ -73,7 +73,7 @@ export class Sessions extends Component {
         <SessionContentSection>{sessionFiles}</SessionContentSection>
 
         <SessionContentSection>{askUs}</SessionContentSection>
-      </PageContent>
+      </Page>
     );
   }
 }

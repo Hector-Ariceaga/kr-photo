@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {
-  PageContent,
+  Page,
   TwoPortrait,
   TallImageContainer,
   TallImagePreview,
@@ -24,7 +24,7 @@ export class Portfolio extends Component {
     );
 
     return (
-      <PageContent>
+      <Page>
         {portfolio}
 
         <TwoPortrait>
@@ -47,7 +47,7 @@ export class Portfolio extends Component {
             Weddings and Events
           </TallImageContainer>
         </TwoPortrait>
-      </PageContent>
+      </Page>
     );
   }
 }

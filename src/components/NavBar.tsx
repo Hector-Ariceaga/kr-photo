@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { fadeInDown } from "react-animations";
-import KRP_Logo from "../assets/images/KRP_Logo.png";
 
+import KRP_Logo from "../assets/images/KRP_Logo.png";
 import { theme } from "../assets/styles";
 
 export const NavBar = () => {
@@ -18,7 +18,9 @@ export const NavBar = () => {
         <StyledLink to="/portfolio" exact>
           Portfolio
         </StyledLink>
-        <Logo src={KRP_Logo} alt="logo" />
+        <Logo>
+          <img src={KRP_Logo} alt="logo" />
+        </Logo>
         <StyledLink to="/journal" exact>
           Journal
         </StyledLink>
@@ -33,24 +35,26 @@ export const NavBar = () => {
   );
 };
 
-export const NavWrapper = styled.header`
-  text-align: center;
-  margin-bottom: 2rem;
-`;
-
 export const Links = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 10px;
   font-size: 1.3rem;
   text-align: center;
+  max-width: 75rem;
+  width: 100%;
 `;
 
-export const Logo = styled.img`
+export const Logo = styled.div`
   height: 6rem;
-  width: 10rem;
-  margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media only screen and (min-width: ${theme.breakpoints.aboveTablet}) {
+    width: auto;
+  }
 `;
 
 export const StyledLink = styled(NavLink)`
@@ -59,14 +63,38 @@ export const StyledLink = styled(NavLink)`
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  margin: 0 3rem;
   font-weight: 500;
 
   &:hover {
     color: ${theme.colors.lightGrey};
   }
+
   &.active {
     color: #bc9b5d;
     animation: 1s ${keyframes`${fadeInDown}`} 1;
+  }
+
+  @media only screen and (min-width: ${theme.breakpoints.aboveTablet}) {
+    font-size: 1.125rem;
+  }
+
+  @media only screen and (min-width: ${theme.breakpoints.aboveDesktop}) {
+    font-size: inherit;
+  }
+`;
+
+export const NavWrapper = styled.header`
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  ${StyledLink} {
+    display: none;
+
+    @media only screen and (min-width: ${theme.breakpoints.aboveTablet}) {
+      display: block;
+    }
   }
 `;

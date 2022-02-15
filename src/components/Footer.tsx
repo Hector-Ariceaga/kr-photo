@@ -30,7 +30,10 @@ const FooterSection = styled.footer`
   height: auto;
   width: 100%;
   text-align: center;
-
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
   font-family: ${theme.fonts.secondary};
 `;
 

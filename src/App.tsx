@@ -22,9 +22,8 @@ function App() {
             Contact Us
           </Route>
         </Switch>
-
-        <Footer />
       </Router>
+      <Footer />
     </Site>
   );
 }

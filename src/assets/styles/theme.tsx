@@ -6,10 +6,17 @@ export const GlobalStyles = createGlobalStyle`
   * {
     @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Montserrat|EB+Garamond|Tangerine|Lateef&display=swap');
     font-family:'Cormorant Garamond', 'Montserrat', 'Tangerine', 'Lateef', 'EB Garamond', sans-serif, cursive;
+    
   }
 
   * body {
     margin: 0;
+
+    #root {
+      min-height: 100vh;
+      padding-bottom: 4rem;
+      position: relative;
+    }
   }
 `;
 
@@ -35,6 +42,7 @@ export const theme = {
 
 export const Site = styled.div`
   font-size: 1rem;
+  padding: 0 2rem;
 `;
 
 export const FooterLink = styled.a`
